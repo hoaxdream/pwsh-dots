@@ -38,3 +38,17 @@
 - $ scoop install fzf
 - $ Install-Module -Name PSFzf -Scope CurrentUser -Force
 - Restart terminal
+
+#### Mpv
+- Install mpv: https://mpv.io/installation/
+- Move mpv folder in C:\Program Files\mpv
+- Go to installer run as admin mpv-install.bat
+- On root folder run as admin updater.bat and install yt-dlp
+- Copy portable_config to mpv folder installer
+- Copy shaders to C:\Users\hoaxdream\AppData\Roaming\mpv
+- Add mpv to path:
+    - Open settings, about then click Advanced system settings
+    - Click Environment Variables
+    - Click Path in System variables and edit
+    - Click new then add: C:\Program Files\mpv
+- use mpv --profile=H60 https://youtube/link
