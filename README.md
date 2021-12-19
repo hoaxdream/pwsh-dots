@@ -52,3 +52,6 @@
     - Click Path in System variables and edit
     - Click new then add: C:\Program Files\mpv
 - use mpv --profile=H60 https://youtube/link
+#### Sublime
+- Copy Preferences.sublime-settings to:
+    - C:\Users\hoaxdream\AppData\Roaming\Sublime Text\Packages\User
