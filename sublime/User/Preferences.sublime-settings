@@ -1,0 +1,12 @@
+{
+	"theme": "gruvbox.sublime-theme",
+	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard).sublime-color-scheme",
+	"font_face": "Caskaydia Cove Nerd Font Complete Mono Windows Compatible",
+	"font_size": 16,
+	"font_options": ["no_italic"],
+	"translate_tabs_to_spaces": true,
+	"file_tab_style": "square",
+	"inactive_sheet_dimming": false,
+	"show_encoding": true,
+	"relative_line_numbers": true,
+}
