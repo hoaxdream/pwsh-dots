@@ -4,7 +4,8 @@
 - In Windows Terminal set font to nerd font
 - Change font size to 14
 - Open settings.json in windows terminal settings
-- Copy gruvbox color scheme in settings.json
+- Copy gruvbox color scheme in settings.json in:
+- C:\Users\{USERNAME}\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 - Change color scheme to gruvbox
 - Download powershell
 - Open powershell in windows terminal
