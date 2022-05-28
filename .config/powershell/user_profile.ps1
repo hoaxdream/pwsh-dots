@@ -1,11 +1,13 @@
 # Prompt
+# set PowerShell to UTF-8
+[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 Import-Module posh-git
-Import-Module oh-my-posh
+# Import-Module oh-my-posh
 
 # Load prompt config
-function Get-ScriptDirectory { Split-Path $MyInvocation.ScriptName }
-$PROMPT_CONFIG = Join-Path (Get-ScriptDirectory) 'nu4a.omp.json'
-oh-my-posh --init --shell pwsh --config $PROMPT_CONFIG | Invoke-Expression
+$omp_config = Join-Path $PSScriptRoot ".\nu4a.omp.json"
+oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
 
 # Icons
 Import-Module -Name Terminal-Icons
