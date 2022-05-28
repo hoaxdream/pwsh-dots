@@ -1,4 +1,4 @@
-#### My dotfiles for Windows
+### My dotfiles for Windows
 - Install Nerd font
 - Download Windows Terminal
 - In Windows Terminal set font to nerd font
@@ -56,3 +56,107 @@
 #### Sublime
 - Copy Preferences.sublime-settings to:
     - C:\Users\hoaxdream\AppData\Roaming\Sublime Text\Packages\User
+
+### Tweaks
+#### Remap Keys
+- Open regedit Windows Key+R
+- Navigate in:
+    - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout
+- In the right pane right click then add Binary value and name it:
+    - Scancode Map
+- Then add one of the following:
+
+**Map Capslock to Escape**
+00  00  00  00  00  00  00  00
+02  00  00  00  01  00  3A  00
+00  00  00  00
+
+**Swap Capslock and Escape**
+00 00 00 00 00 00 00 00
+03 00 00 00 3a 00 01 00
+01 00 3a 00 00 00 00 00
+
+**Map Capslock to ScrollLock**
+00 00 00 00 00 00 00 00
+03 00 00 00 3a 00 46 00
+01 00 3a 00 00 00 00 00
+
+#### Add control panel in context menu windows 10
+#### https://www.thewindowsclub.com/control-panel-desktop-context-menu-windows
+- Open regedit Windows Key+R
+- Navigate in:
+    - HKEY_CLASSES_ROOT\DesktopBackground\Shell
+- In the left pane, create a subkey using Right click in Shell -> New -> Key
+- Name it ControlPanel
+- In the right pane of ControlPanel, create three strings with corresponding data:
+    - MUIVerb: Control Panel
+    - SubCommands: CP-Category;CP-Icons;CP-AllTasks
+    - Icon:  imageres.dll,-27
+
+- Add cascade options and navigate in:
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell
+
+- In the left pane, create a subkey using Right click in shell -> New -> Key and name it:
+    - CP-Icons
+- Modify CP-Icons default value in right pane with:
+    - Icons View
+- Add another string and value in CP-Icons:
+    - Icon: imageres.dll,-27
+
+- In the left pane, create a subkey using Right click in shell -> New -> Key and name it:
+    - CP-Category
+- Modify CP-Category default value in right pane with:
+    - Category View
+- Add another string and value in CP-Category:
+    - Icon: imageres.dll,-27
+
+- In the left pane, create a subkey using Right click in shell -> New -> Key and name it:
+    - CP-AllTasks
+- Modify CP-AllTasks default value in right pane with:
+    - All Tasks
+- Add another string and value in CP-AllTasks:
+    - Icon: imageres.dll,-27
+
+- Create sub key to CP-Icons, CP-Category, CP-AllTasks using right click in each one -> New -> Key and name it:
+    - command
+- In CP-Icons edit Default value string in the right pane:
+    - explorer.exe shell:::{21EC2020-3AEA-1069-A2DD-08002B30309D}
+- In CP-Category edit Default value string in the right pane:
+    - explorer.exe shell:::{26EE0668-A00A-44D7-9371-BEB064C98683}
+- In CP-AllTasks edit Default value string in the right pane:
+    - explorer.exe shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
+- Done, Press Windows Key+D to access Desktop and right click for control panel
+
+#### Disable windows shake
+- Open regedit Windows Key+R
+- Navigate in:
+    - HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+- Create 32Dword and name it:
+    - DisallowShaking
+        - 0 = enable
+        - 1 = disable
+
+#### Delete gitbash context menu
+- Open regedit Windows Key+R
+- Navigate in:
+    - HKEY_CLASSES_ROOT\Directory\shell\git_gui
+    - HKEY_CLASSES_ROOT\Directory\shell\git_shell
+    - HKEY_CLASSES_ROOT\LibraryFolder\background\shell\git_gui
+    - HKEY_CLASSES_ROOT\LibraryFolder\background\shell\git_shell
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\git_gui
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\git_shell
+
+#### Programs
+- 7zip
+- geek uninstaller
+- idm
+- mpv
+- qbitorrent
+- sublime text
+- vc redist x86
+- vc redist x64
+- vcredist x86
+- google chrome
+- battlenet
+- steam
+- gog galaxy
