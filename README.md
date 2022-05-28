@@ -29,8 +29,11 @@
 - make folder name powershell in Documents
 - $ nvim $PROFILE.CurrentUserCurrentHost
 - `. $env:USERPROFILE\.config\powershell\user_profile.ps1`
-- $ Install-Module posh-git -Scope CurrentUser -Force
-- $ Install-Module oh-my-posh -Scope CurrentUser -Force
+- $ scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+- To update:
+    - $ scoop update oh-my-posh
+- $ Install-Module posh-git -Scope CurrentUser -Force   `obsolete`
+- $ Install-Module oh-my-posh -Scope CurrentUser -Force `obsolete`
 - Restart terminal
 - $ cd .config/powershell
 - $ Install-Module -Name Terminal-Icons -Repository PSGallery -Force
