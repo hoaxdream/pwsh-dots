@@ -66,6 +66,7 @@
     - Scancode Map
 - Then add one of the following:
 
+```
 **Map Capslock to Escape**
 00  00  00  00  00  00  00  00
 02  00  00  00  01  00  3A  00
@@ -80,6 +81,7 @@
 00 00 00 00 00 00 00 00
 03 00 00 00 3a 00 46 00
 01 00 3a 00 00 00 00 00
+```
 
 #### Add control panel in context menu windows 10
 #### https://www.thewindowsclub.com/control-panel-desktop-context-menu-windows
