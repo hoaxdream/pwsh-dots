@@ -32,7 +32,7 @@
 - $ scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 - To update:
     - $ scoop update oh-my-posh
-- $ Install-Module posh-git -Scope CurrentUser -Force   `obsolete`
+- $ Install-Module posh-git -Scope CurrentUser -Force
 - $ Install-Module oh-my-posh -Scope CurrentUser -Force `obsolete`
 - Restart terminal
 - $ cd .config/powershell
