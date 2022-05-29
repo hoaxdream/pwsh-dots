@@ -36,3 +36,18 @@ function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
+
+# Yt-dlp download video
+function dlv ([string]$UrlLink) {
+  yt-dlp -S res,ext:mp4:m4a --recode mp4 "$UrlLink"
+}
+
+# Yt-dlp download audio
+function dla ([string]$UrlLink) {
+  yt-dlp -x --audio-format mp3 --audio-quality 0 "$UrlLink"
+}
+
+# Mpv
+function svid ([string]$UrlLink) {
+  mpv --profile=H60 "$UrlLink"
+}
